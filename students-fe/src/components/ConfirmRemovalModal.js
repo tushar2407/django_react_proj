@@ -15,7 +15,7 @@ class ConfirmRemovalModal extends Component{
         }));
     };
     deleteStudent = pk => {
-        axios.delete(API_URL+pk).then(() => {
+        axios.delete(API_URL+pk+"/").then(() => {
             this.props.resetState();
             this.toggle();
         });
@@ -36,7 +36,7 @@ class ConfirmRemovalModal extends Component{
                         </Button>
                         <Button 
                             type="button"
-                            color="primary"
+                            color="danger"
                             onClick={() => this.deleteStudent(this.props.pk)}>
                                 Yes
                         </Button>

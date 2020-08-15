@@ -33,17 +33,17 @@ class StudentList extends Component{
                                 <td>{student.email}</td>
                                 <td>{student.document}</td>
                                 <td>{student.phone}</td>
-                                <td>{student.regustrationDate}</td>
+                                <td>{student.registrationDate}</td>
                                 <td align="center">
                                     <NewStudentModal
                                         create={false}
                                         student={student}
-                                        resetstate={this.props.resetstate}
+                                        resetState={this.props.resetState}
                                     />
                                     &nbsp;&nbsp;
                                     <ConfirmRemovalModal
                                         pk={student.pk}
-                                        resetState={this.props.resetstate}
+                                        resetState={this.props.resetState}
                                     />
                                 </td>
                             </tr>
